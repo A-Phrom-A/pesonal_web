@@ -14,42 +14,56 @@ const projects = [
         description: 'Automated multimedia pipeline using DeepSeek Local for text structuring and WangchanBERTA for emotion detection.',
         mechanism: 'Powers a voice cloning system (Open Voice) and context-aware image generation via Animagine XL 4.0.',
         tags: ['AI Engineering', 'Generative AI', 'NLP'],
-        href: '#'
+        href: '#',
+        pdfHref: undefined
     },
     {
         title: 'PolyDry Predictor',
         description: 'Smart dehydration system for 3D printing filaments.',
         mechanism: 'Integrated DHT22 sensors with an MCU for real-time data transmission and optimal dehydration calculation.',
         tags: ['IoT', '3D Printing', 'Hardware'],
-        href: '/pdf/PolyDry Predictor (1).pdf'
+        href: '/pdf/PolyDry Predictor (1).pdf',
+        pdfHref: undefined
     },
     {
         title: 'AI-Based Motorcycle Rider Helmet Detection',
         description: 'Real-time road safety monitoring system.',
         mechanism: 'Applied Object Detection (YOLO/TensorFlow) for real-time video processing to verify helmet usage.',
         tags: ['Computer Vision', 'Deep Learning'],
-        href: 'https://aibasedsystemformotorcycleriderhelmetwearingdetection.streamlit.app/'
+        href: 'https://aibasedsystemformotorcycleriderhelmetwearingdetection.streamlit.app/',
+        pdfHref: undefined
     },
     {
         title: 'Mobile Price Prediction: New Era',
         description: 'Market trend analyzer for modern smartphones (2020-2025).',
         mechanism: 'Implemented a Regression Model analyzing hardware specs and historical data for price prediction.',
         tags: ['Data Science', 'Machine Learning'],
-        href: 'https://s6604062610021kittisak.streamlit.app/'
+        href: 'https://s6604062610021kittisak.streamlit.app/',
+        pdfHref: undefined
     },
     {
         title: 'Mobile Price Prediction: Classic Era',
         description: 'Valuation system for vintage mobile phones (2000-2010).',
         mechanism: 'Engineered a Neural Network to process complex, non-linear data relationships in legacy hardware.',
         tags: ['Neural Networks', 'Data Analysis'],
-        href: 'https://s6604062610021kittisak.streamlit.app/'
+        href: 'https://s6604062610021kittisak.streamlit.app/',
+        pdfHref: undefined
     },
     {
         title: 'Java Tower Hero Defence Game',
         description: 'A classic Tower Hero Defence game built entirely in Java.',
         mechanism: 'Players control a stationary or jumping hero to dodge or attack obstacles and monsters in a single-lane defence format.',
         tags: ['Java', 'Game Development', 'OOP'],
-        href: 'https://github.com/A-Phrom-A/Hero_Runner-final-'
+        href: 'https://github.com/A-Phrom-A/Hero_Runner-final-',
+        pdfHref: undefined
+    },
+    {
+        title: 'Smart Pet Feeder with IoT Integration',
+        description: 'Automated pet feeding system with real-time monitoring and history tracking.',
+        mechanism: 'Integrated ESP32 with a load cell for weight sensing and MG996R servo for dispensing, controlled via Blynk IoT platform.',
+        tags: ['IoT', 'ESP32', 'Hardware'],
+        href: 'https://github.com/teerapat-ch/iot-final-project/tree/PUMPUM',
+        pdfHref: '/pdf/Project Report IoT 6604062610021.pdf'
     },
 ];
 
@@ -178,16 +192,30 @@ export function Projects() {
                                                     ))}
                                                 </div>
 
-                                                <a
-                                                    href={project.href}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="w-full"
-                                                >
-                                                    <MagneticButton className="w-full h-11 inline-flex items-center justify-center rounded-xl bg-zinc-100 text-zinc-950 font-medium text-sm transition-transform active:scale-95 hover:bg-white">
-                                                        View Project
-                                                    </MagneticButton>
-                                                </a>
+                                                <div className="flex flex-col sm:flex-row gap-3">
+                                                    <a
+                                                        href={project.href}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex-1"
+                                                    >
+                                                        <MagneticButton className="w-full h-11 inline-flex items-center justify-center rounded-xl bg-zinc-100 text-zinc-950 font-medium text-sm transition-transform active:scale-95 hover:bg-white">
+                                                            {project.pdfHref ? 'View Code' : 'View Project'}
+                                                        </MagneticButton>
+                                                    </a>
+                                                    {project.pdfHref && (
+                                                        <a
+                                                            href={project.pdfHref}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex-1"
+                                                        >
+                                                            <MagneticButton className="w-full h-11 inline-flex items-center justify-center rounded-xl bg-zinc-800/50 text-zinc-100 border border-zinc-700/50 font-medium text-sm transition-transform active:scale-95 hover:bg-zinc-800 hover:border-zinc-600">
+                                                                View PDF
+                                                            </MagneticButton>
+                                                        </a>
+                                                    )}
+                                                </div>
                                             </div>
                                         </TiltCard>
                                     </FadeIn>
