@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-zinc-950 text-zinc-100 antialiased`}>
+    <html lang="en" className="scroll-smooth" translate="no" suppressHydrationWarning>
+      <body className={`${inter.className} bg-zinc-950 text-zinc-100 antialiased`} suppressHydrationWarning>
         <SpotlightBackground />
         {children}
       </body>

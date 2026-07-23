@@ -16,7 +16,7 @@ export function Hero() {
                         KITTISAK TANTRATORN
                     </h1>
                     <p className="mt-6 text-lg text-zinc-400 sm:text-xl max-w-2xl mx-auto">
-                        I&apos;m a CS student specializing in AI pipelines, IoT systems, and applied cybersecurity.
+                        CS student specializing in <span className="text-zinc-200 font-medium">GIS &amp; Remote Sensing</span>, AI Pipelines, and IoT systems. Experienced in satellite data analysis and agricultural decision support.
                     </p>
                     <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                         <MagneticButton

@@ -7,44 +7,44 @@ import {
     Cpu,
     ShieldCheck,
     Terminal,
-    Lock
+    Map
 } from 'lucide-react';
 
 const orbitImages = [
     { src: "/images/about/hackathon-group.jpg", alt: "Cyber Warrior Hackathon", radius: "60% 40% 30% 70% / 60% 30% 70% 40%" },
-    { src: "/images/about/lantern-festival.jpg", alt: "Lantern Festival", radius: "30% 70% 70% 30% / 30% 30% 70% 70%" },
-    { src: "/images/about/mountain-view.jpg", alt: "Mountain View", radius: "50% 50% 33% 67% / 55% 27% 73% 45%" },
+    { src: "/images/about/งานPlamDSS.jfif", alt: "Palm DSS Project", radius: "30% 70% 70% 30% / 30% 30% 70% 70%" },
+    { src: "/images/about/GIsdaงานร่างแผนพัฒนาGIS_2070-2075.jpg", alt: "GIS Development Plan", radius: "50% 50% 33% 67% / 55% 27% 73% 45%" },
     { src: "/images/about/about1.jpg", alt: "About Me", radius: "73% 27% 59% 41% / 57% 59% 41% 43%" },
-    { src: "/images/about/event1.jpg", alt: "Tech Event", radius: "26% 74% 49% 51% / 21% 51% 49% 79%" },
+    { src: "/images/about/งานนิเทศสหกิจ.jfif", alt: "Internship Supervision", radius: "26% 74% 49% 51% / 21% 51% 49% 79%" },
     { src: "/images/about/group1.jpg", alt: "Team Collaboration", radius: "64% 36% 27% 73% / 70% 59% 41% 30%" },
     { src: "/images/about/group2.jfif", alt: "Community", radius: "45% 55% 60% 40% / 50% 35% 65% 50%" },
 ];
 
 const skillCategories = [
     {
+        name: "GIS & Remote Sensing",
+        icon: <Map className="w-5 h-5 text-teal-400" />,
+        tags: ["QGIS", "Geopandas", "Rasterio", "SNAP", "Sentinel-1 SAR", "Sentinel-2", "SAM", "GeoAIpy", "Data Fusion"]
+    },
+    {
         name: "Artificial Intelligence",
         icon: <Brain className="w-5 h-5 text-purple-400" />,
-        tags: ["Machine Learning", "Neural Networks", "Generative AI", "NLP"]
+        tags: ["Machine Learning", "Neural Networks", "Computer Vision", "Generative AI", "NLP", "ViT / MAE"]
     },
     {
         name: "IoT & Hardware",
         icon: <Cpu className="w-5 h-5 text-emerald-400" />,
-        tags: ["Microcontrollers", "3D Printer Optimization", "Raspberry Pi"]
-    },
-    {
-        name: "Cybersecurity",
-        icon: <ShieldCheck className="w-5 h-5 text-red-400" />,
-        tags: ["Penetration Testing", "Digital Forensics", "Incident Response"]
+        tags: ["Microcontrollers", "3D Printer Optimization", "Raspberry Pi", "Bambu Lab A1"]
     },
     {
         name: "Programming",
         icon: <Terminal className="w-5 h-5 text-blue-400" />,
-        tags: ["Python", "C++", "Java", "JavaScript", "SQL", "HTML", "CSS"]
+        tags: ["Python", "C++", "Java", "JavaScript", "SQL", "HTML", "CSS", "Shell Scripting"]
     },
     {
-        name: "Cybersecurity Tools",
-        icon: <Lock className="w-5 h-5 text-amber-400" />,
-        tags: ["Kali Linux", "Nmap", "Wireshark", "Metasploit", "Ghidra"]
+        name: "Cybersecurity (Foundational)",
+        icon: <ShieldCheck className="w-5 h-5 text-red-400" />,
+        tags: ["Penetration Testing", "Digital Forensics", "CTF", "Kali Linux", "Nmap", "Wireshark", "Burp Suite"]
     }
 ];
 
@@ -113,7 +113,7 @@ export function About() {
                             About <span className="text-zinc-700">&</span> Technical Skills
                         </h2>
                         <p className="text-lg text-zinc-400 leading-relaxed max-w-xl">
-                            I am a passionate Computer Science student specializing in <span className="text-zinc-200 font-medium">AI and IoT</span>, with a strong foundation in <span className="text-zinc-200 font-medium">Cybersecurity</span>. I love building innovative solutions and participating in hackathons.
+                            I am a CS student specializing in <span className="text-zinc-200 font-medium">GIS &amp; Remote Sensing</span> and <span className="text-zinc-200 font-medium">AI Pipelines</span>, with experience in multi-modal satellite data analysis and agricultural decision support. I have a foundational background in <span className="text-zinc-200 font-medium">Cybersecurity</span> from national CTF competitions and hackathons.
                         </p>
                     </div>
 

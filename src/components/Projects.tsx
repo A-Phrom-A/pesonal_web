@@ -10,9 +10,25 @@ import { Code, Award, Briefcase, X, ChevronDown, ChevronUp } from 'lucide-react'
 
 const projects = [
     {
-        title: 'AI Novel Narrator & Illustrative Background (in progress)',
+        title: 'GISxKMUTNB: Multi-Modal Satellite Palm Detection (Senior Project, In Progress)',
+        description: 'Self-supervised (MAE) + fine-tuning pipeline on a Vision Transformer (ViT) architecture to detect oil palm plantations from multi-sensor satellite data.',
+        mechanism: 'Fuses Sentinel-1 SAR, Sentinel-2 Optical, and GEO-Satellite RGB data into a 12-band input tensor, outputting pixel-wise probability maps. Built as two reusable Python libraries with a proof-of-concept training pipeline.',
+        tags: ['GIS', 'Remote Sensing', 'ViT / MAE', 'Deep Learning', 'Satellite Data'],
+        href: '#',
+        pdfHref: undefined
+    },
+    {
+        title: 'AI-Assisted Palm Decision Support System (DSS) (In Progress)',
+        description: 'AI pipeline contributing to a palm decision support system for agricultural analysis and decision-making.',
+        mechanism: 'Applied SAM (Segment Anything Model) to segment plantation areas, and used GeoAIpy to classify palm coverage and generate probability maps to support decision-making.',
+        tags: ['GIS', 'SAM', 'GeoAI', 'Remote Sensing'],
+        href: '#',
+        pdfHref: undefined
+    },
+    {
+        title: 'AI Novel Narrator & Illustrative Background (On Hold – Personal Hobby)',
         description: 'Automated multimedia pipeline using DeepSeek Local for text structuring and WangchanBERTA for emotion detection.',
-        mechanism: 'Powers a voice cloning system (Open Voice) and context-aware image generation via Animagine XL 4.0.',
+        mechanism: 'Powers a voice cloning system (OpenVoice) and context-aware image generation via Animagine XL 4.0. Currently paused to focus on primary GIS research work.',
         tags: ['AI Engineering', 'Generative AI', 'NLP'],
         href: '#',
         pdfHref: undefined
@@ -79,26 +95,39 @@ const certificates = [
 const experiences = [
     {
         id: 1,
-        company: 'การไฟฟ้าส่วนภูมิภาค (กองบริการ)',
-        position: 'นักศึกษาฝึกงานด้านช่างเทคนิคไฟฟ้า',
-        duration: '22 พฤศจิกายน 2564 – 12 กุมภาพันธ์ 2565',
+        company: 'GISlab True Miracle',
+        position: 'AI Scientist (Intern)',
+        duration: 'May 5, 2026 — Nov 30, 2026 (7 months)',
         tasks: [
-            'สนับสนุนงานด้านระบบไฟฟ้าและงานบริการภายในหน่วยงาน',
-            'ศึกษาและปฏิบัติงานตามกระบวนการทำงานด้านวิศวกรรมไฟฟ้า',
-            'มีส่วนร่วมในการตรวจสอบ บำรุงรักษา และแก้ไขปัญหาเบื้องต้นของระบบไฟฟ้า',
-            'ปฏิบัติงานตามมาตรฐานความปลอดภัยในการทำงานด้านไฟฟ้า',
+            'Developed a Multi-Modal satellite data analysis pipeline (Sentinel-1 SAR, Sentinel-2, GEO-RGB) for oil palm plantation detection.',
+            'Designed and trained a Vision Transformer (ViT) model using Self-Supervised Learning (MAE) + Fine-Tuning for semantic segmentation.',
+            'Applied Segment Anything Model (SAM) and GeoAIpy in an AI Decision Support System (DSS) for palm plantation area analysis.',
+            'Built reusable Python libraries for data fusion and ViT model inference.',
+            'Worked under the supervision of Thantham Khamyai within the AI Scientist team.',
         ],
     },
     {
         id: 2,
-        company: 'บริษัท ไมซ์ แมเนจเมนท์ จำกัด',
-        position: 'นักศึกษาฝึกงานช่างเทคนิคระบบวิศวกรรมอาคาร',
-        duration: '22 พฤศจิกายน 2564 – 12 กุมภาพันธ์ 2565',
+        company: 'Provincial Electricity Authority (PEA) – Service Division',
+        position: 'Electrical Engineering Intern',
+        duration: 'November 22, 2021 – February 12, 2022',
         tasks: [
-            'สนับสนุนงานด้านระบบวิศวกรรมอาคาร เช่น ระบบไฟฟ้า และระบบประกอบอาคาร',
-            'ช่วยตรวจสอบและซ่อมบำรุงอุปกรณ์และระบบภายในอาคาร',
-            'เรียนรู้การทำงานเชิงเทคนิคในสถานที่ปฏิบัติงานจริง',
-            'ทำงานร่วมกับทีมช่างและทีมวิศวกรรม เพื่อสนับสนุนการดำเนินงานขององค์กร',
+            'Supported electrical system operations and internal service tasks within the division.',
+            'Studied and performed work following electrical engineering processes and standards.',
+            'Participated in inspection, maintenance, and basic troubleshooting of electrical systems.',
+            'Adhered to electrical safety standards throughout all on-site activities.',
+        ],
+    },
+    {
+        id: 3,
+        company: 'MICE Management Co., Ltd.',
+        position: 'Building Engineering Systems Technician Intern',
+        duration: 'November 22, 2021 – February 12, 2022',
+        tasks: [
+            'Supported building engineering systems including electrical and facility systems.',
+            'Assisted in inspection and maintenance of equipment and internal building systems.',
+            'Gained hands-on technical experience in real workplace environments.',
+            'Collaborated with technician and engineering teams to support organizational operations.',
         ],
     },
 ];
